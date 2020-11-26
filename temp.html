@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(tempC){
+            this.tempC = tempC;
+        }
+        convertTempF(){
+            return this.tempC * 9 / 5 + 32;
+        }
+        convertTempK(){
+            return this.tempC + 273.15;
+        }
+    }
+    let c =+prompt("Nhập độ C")
+    let tempC = new Temperature(c);
+    let tempF = tempC.convertTempF();
+    let tempK = tempC.convertTempK();
+    alert(c +' độ C bằng '+ tempF + ' độ F và '+ tempK + ' độ K ')
+
+</script>
+</body>
+</html>
